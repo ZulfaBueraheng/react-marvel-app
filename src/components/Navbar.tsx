@@ -21,7 +21,8 @@ export const Navbar: FC = ({ children }) => {
                   <div className="ml-3 flex item-baseline space-x-2">
                     <Link  to='/' className='text-white hover:bg-red-800 px-3 py-2 rounded-md text-md font-medium'>
                       Home
-                    </Link>
+                    </
+                    Link>
                     <Link to='/heroes' className='text-white hover:bg-red-800 px-3 py-2 rounded-md text-md font-medium'>
                       Heroes
                     </Link>

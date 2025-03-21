@@ -1,23 +1,24 @@
-import { useState } from 'react'
-import { Route, Switch } from 'wouter'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useState } from "react";
+import { Route, Switch } from "wouter";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
 
-import { Navbar } from './components/Navbar'
-import { Home } from './pages'
+import { Navbar } from "./components/Navbar";
+import { Home, Heroes, HeroesDetail } from "./pages";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <>
-    <Navbar />
-    <Switch>
-      <Route path='/' component={Home}/>
-    </Switch>
-    
+      <Navbar />
+      <Switch>
+        <Route path="/" component={Home} />
+        <Route path="/heroes" component={Heroes} />
+        <Route path="/heroes/:heroesName" component={HeroesDetail} />
+      </Switch>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
